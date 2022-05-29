@@ -1,0 +1,32 @@
+button{
+    height: 50px;
+    width: 150px;
+    background-color: brown;
+}
+/* p{
+    background-color: bisque;
+} */
+#para1{
+    color: aqua;
+}
+.sec1{
+    color: aquamarine;
+}
+ /* div p{
+     background-color: aqua;
+ } */
+
+ input[type="text"]{
+     border-color: red;
+ }
+ h3,h4,h5{
+     color: burlywood;
+ }
+
+ .div1{
+    border: 2px solid;
+ }
+ .contnt{
+     border: inherit;
+ }
+

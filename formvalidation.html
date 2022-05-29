@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform" method="get">
+        <label for="">Username</label>
+        <input type="text" name="usrname" id="_username" onkeyup="validate()"><br><br>
+        <label for="" id="username_error"></label>
+        <label for="">Password</label>
+        <input type="text" name="pswd" id="_password" onkeyup="validate()"><br><br>
+        <label for="" id="password_error"></label>
+        <button type="submit" onclick="return validate()">Login</button>
+    </form>
+    <script>
+        function validate(){
+            var status=1;
+            // var user = document.getElementById('_username').value;
+            
+            var user = document.forms.myform.usrname.value;
+            var password=document.getElementById('_password').value;
+
+            // alert(user);
+            if(user==""){
+                username_error.innerHTML="please enter your username";
+                username_error.style.display="block";
+                username_error.style.color="red";
+                _username.style.borderColor="red";
+                status=0;
+                // return false;
+            }
+            else if(user.length<3){
+                username_error.innerHTML="username should not be less than 3";
+            }
+            else{
+                username_error.style.display="none";
+                _username.style.borderColor="black";
+                status=1;
+                // return true;
+            }
+           
+            if(password==""){
+                password_error.innerHTML="please enter your password";
+                password_error.style.display="block";
+
+                password_error.style.color="red";
+                _password.style.borderColor="red"
+                status=0;
+                // return false;
+
+            }
+            else{
+                password_error.style.display="none";
+                password_error.style.borderColor="black";
+                status=1;
+            }
+            
+            if(status==0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        
+    </script>
+</body>
+</html>
